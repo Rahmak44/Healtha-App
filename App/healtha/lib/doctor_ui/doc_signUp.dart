@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as http;
 import '../home/home_screen.dart';
 import 'doc_login.dart';
+import 'dr-profile.dart';
 
 
 class docSignUpPage extends StatefulWidget {
@@ -44,6 +45,8 @@ class _docSignUpPageState extends State<docSignUpPage> {
         }),
         headers: {'Content-Type': 'application/json'},
       );
+//////////////////////////////
+
 
       if (response.statusCode == 201) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -78,7 +81,7 @@ class _docSignUpPageState extends State<docSignUpPage> {
           Navigator.pushReplacement(
             context,
             MaterialPageRoute(
-              builder: (context) => HomeScreen(),
+              builder: (context) => drProfile(),
             ),
           );
         });
